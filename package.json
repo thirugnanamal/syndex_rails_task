@@ -1,0 +1,20 @@
+{
+  "name": "investor_portal_interview",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-typescript": "^7.10.4",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "stimulus": "^1.1.1",
+    "turbolinks": "^5.2.0",
+    "typescript": "^3.9.6"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@types/webpack-env": "^1.15.2",
+    "prettier": "^2.0.5",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

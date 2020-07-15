@@ -1,0 +1,82 @@
+# The behavior of RuboCop can be controlled via the .rubocop.yml
+# configuration file. It makes it possible to enable/disable
+# certain cops (checks) and to alter their behavior if they accept
+# any parameters. The file can be placed either in your home
+# directory or in some project directory.
+#
+# RuboCop will start looking for the configuration file in the directory
+# where the inspected file is and continue its way up to the root directory.
+#
+# See https://docs.rubocop.org/rubocop/configuration
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-minitest
+  - rubocop-i18n
+
+AllCops:
+  Exclude:
+    - "bin/**/*"
+    - "node_modules/**/*"
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - Gemfile
+
+Style/Documentation:
+  Exclude:
+    - app/helpers/application_helper.rb
+    - app/mailers/application_mailer.rb
+    - app/models/application_record.rb
+    - config/application.rb
+    - test/application_system_test_case.rb
+    - test/test_helper.rb
+    - test/**/*_test.rb
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+Lint/DuplicateElsifCondition:
+  Enabled: true
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/AccessorGrouping:
+  Enabled: true
+Style/ArrayCoercion:
+  Enabled: true
+Style/BisectedAttrAccessor:
+  Enabled: true
+Style/CaseLikeIf:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
+Style/HashAsLastArrayItem:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashLikeCase:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Style/RedundantAssignment:
+  Enabled: true
+Style/RedundantFetchBlock:
+  Enabled: true
+Style/RedundantFileExtensionInRequire:
+  Enabled: true
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+Style/RedundantRegexpEscape:
+  Enabled: true
+Style/SlicingWithRange:
+  Enabled: true
