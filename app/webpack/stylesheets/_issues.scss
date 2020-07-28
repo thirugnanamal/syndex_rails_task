@@ -1,0 +1,108 @@
+.issue-header-hero {
+  background-color: $tint-dark-blue;
+  background-position: center;
+  background-size: cover;
+  color: $secondary-white;
+  height: 56vh;
+  margin-top: rem(65);
+  min-height: 26.25rem;
+  position: relative;
+}
+
+.issue-header-hero-dot-matrix {
+  display: none;
+  left: rem(100);
+  position: absolute;
+  top: rem(-30);
+  z-index: -1;
+
+  @include breakpoint(medium) {
+    display: unset;
+  }
+}
+
+.issue-header-hero-side-circle {
+  display: none;
+  height: 100%;
+  mix-blend-mode: multiply;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include breakpoint(medium) {
+    display: unset;
+  }
+}
+
+.issue-header-hero-cover {
+  padding: rem(40);
+
+  @include breakpoint(medium) {
+    padding: 3.5rem 5.5rem;
+  }
+}
+
+.issue-header-image-hero-cover {
+  @include hero-image-cover-gradient;
+}
+
+.wholesale-bubble {
+  background: $primary-purple;
+  border-radius: 1000rem;
+  color: $secondary-white;
+  font-size: 0.625rem;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.issue-header-hero-issuer {
+  color: $secondary-white;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.issue-header-scroll-to-explore-section {
+  margin: 5rem 3.125rem;
+  min-height: 11.25rem;
+}
+
+.issue-header-scroll-to-explore {
+  font-size: 0.825rem;
+  margin-bottom: 3.125rem;
+  margin-right: 5rem;
+}
+
+.issue-header-banner-warning {
+  color: $secondary-dark-grey;
+  font-size: 0.5625rem;
+}
+
+.issue-key-info {
+  margin-top: 2rem;
+}
+
+.issue-details {
+  @include breakpoint(medium) {
+    margin: 0 3.125rem;
+  }
+}
+
+.issue-properties-container {
+  position: relative;
+}
+
+.apply-button {
+  background-color: transparent;
+  border: 0.124rem solid $white;
+  color: $white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.apply-button:hover {
+  background-color: $primary-hover-bg;
+}
+
+.embedded_text_link {
+  color: unset;
+}

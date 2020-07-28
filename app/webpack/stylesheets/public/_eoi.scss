@@ -1,0 +1,82 @@
+.eoi-header-hero {
+  background-color: $tint-dark-blue;
+  background-position: center;
+  background-size: cover;
+  color: $secondary-white;
+  margin-top: rem(65);
+  min-height: calc(max(26.25rem, 32vh));
+  position: relative;
+}
+
+.eoi-header-hero-dot-matrix {
+  display: none;
+  left: rem(100);
+  position: absolute;
+  top: rem(-30);
+  z-index: -1;
+
+  @include breakpoint(medium) {
+    display: unset;
+  }
+}
+
+.eoi-header-hero-side-circle {
+  display: none;
+  height: 100%;
+  mix-blend-mode: multiply;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include breakpoint(medium) {
+    display: unset;
+  }
+}
+
+.eoi-header-hero-cover {
+  padding: rem(40);
+
+  @include breakpoint(medium) {
+    padding: 3.5rem 5.5rem;
+  }
+}
+
+.eoi-header-image-hero-cover {
+  @include hero-image-cover-gradient;
+}
+
+.eoi-fade-in {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.eoi-header-hero-issuer {
+  color: $secondary-white;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.eoi_summary {
+  a {
+    text-decoration: none;
+  }
+
+  &hover {
+    text-decoration: underline;
+  }
+}
+
+.eoi-questions-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(560);
+}

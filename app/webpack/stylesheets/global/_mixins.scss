@@ -1,0 +1,16 @@
+@mixin card-image-cover-gradient {
+  // scss-lint:disable ColorVariable
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55) 55%, transparent);
+  // scss-lint:enable ColorVariable
+}
+
+@mixin hero-image-cover-gradient {
+  // scss-lint:disable ColorVariable
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent),
+    radial-gradient(
+      circle farthest-corner at 30% 70%,
+      rgba(0, 0, 0, 0.5),
+      transparent
+    );
+  // scss-lint:enable ColorVariable
+}

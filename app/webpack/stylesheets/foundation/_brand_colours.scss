@@ -1,0 +1,15 @@
+$primary-purple: #6137a5;
+$primary-green: #83e5b6;
+$primary-blue: #4ac2c1;
+
+$tint-dark-purple: #250c6b;
+$tint-dark-green: #43ce82;
+$tint-dark-blue: #159492;
+
+$secondary-black-blue: #100623;
+$secondary-dark-grey: #81818d;
+$secondary-medium-grey: #c3c8c9;
+$secondary-light-grey: #f9f9f9;
+$secondary-white: #fff;
+
+$primary-hover-bg: change-color($secondary-light-grey, $alpha: 0.2);

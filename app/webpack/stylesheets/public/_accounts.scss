@@ -1,0 +1,15 @@
+.new-accounts-medium-image {
+  margin-bottom: -1.5rem;
+  margin-top: -10rem;
+
+  @include breakpoint(large) {
+    margin-top: -5rem;
+  }
+}
+
+.account-card {
+  background-color: $primary-purple;
+  color: $secondary-light-grey;
+  height: calc(100% - 1rem);
+  padding-top: 5rem;
+}

@@ -1,0 +1,17 @@
+.info-list {
+  font-size: 0.875rem;
+}
+
+.info-list-item {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.info-list-item-label {
+  width: 50%;
+}
+
+.info-list-item-data {
+  color: $secondary-dark-grey;
+  width: 50%;
+}

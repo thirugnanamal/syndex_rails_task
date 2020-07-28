@@ -1,0 +1,124 @@
+[type="text"],
+[type="password"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="email"],
+[type="number"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="url"],
+[type="color"],
+textarea,
+select {
+  border-bottom: 1px solid $dark-gray;
+
+  &:focus {
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: calc(#{$global-padding / 2} - 1px);
+  }
+
+  .field_with_errors & {
+    border-color: $alert-color;
+  }
+}
+
+@mixin icon-input($name) {
+  padding-left: 3rem;
+  background: inline("../images/icons/black/#{$name}.svg") no-repeat;
+  background-size: 2rem;
+  background-position-y: 0.25rem;
+
+  &:focus {
+    background-image: inline("../images/icons/purple/#{$name}.svg");
+  }
+}
+
+.ii-person {
+  @include icon-input(person);
+}
+
+.ii-mail {
+  @include icon-input(mail);
+}
+
+.ii-phone {
+  @include icon-input(phone);
+}
+
+.ii-lock {
+  @include icon-input(lock);
+}
+
+.ii-document {
+  @include icon-input(document);
+}
+
+.ii-ellipse {
+  @include icon-input(ellipse);
+}
+
+.ii-files {
+  @include icon-input(files);
+}
+
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+
+  + * {
+    border: 1px solid $dark-gray;
+    border-radius: 50%;
+    height: 1.4rem;
+    margin: 0;
+    width: 1.4rem;
+
+    .field_with_errors & {
+      border-color: $alert-color;
+    }
+  }
+}
+
+[type="checkbox"]:checked + * {
+  background-image: inline("../images/icons/black/tick.svg");
+  background-position: center;
+  background-size: 1.4rem;
+}
+
+[type="submit"] {
+  margin-top: 0.5rem;
+}
+
+.form-submit-2 {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.form-field-error-message {
+  color: $alert-color;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+
+  label + & {
+    margin-top: 0;
+  }
+}
+
+.faux-input {
+  margin-bottom: 1rem;
+}
+
+select {
+  box-shadow: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 2.8;
+  margin: 0 0 1rem;
+  padding: 0.5rem;
+}

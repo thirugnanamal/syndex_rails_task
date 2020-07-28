@@ -1,0 +1,132 @@
+.page-header {
+  @include page-content;
+
+  padding: 1.4rem 1.875rem;
+
+  @include breakpoint(medium) {
+    padding: 1.4rem 3.125rem;
+  }
+
+  &,
+  & ul {
+    background: none;
+  }
+}
+
+// scss-lint:disable QualifyingElement
+a.header-logo-link {
+  padding-left: 0;
+}
+
+a.header-close-link {
+  padding-right: 0;
+}
+// scss-lint:enable QualifyingElement
+
+.header-navigation-link {
+  align-items: center;
+  color: $secondary-black-blue;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.header-navigation-login-link {
+  color: $primary-green;
+}
+
+.header-navigation-link-container:hover a {
+  color: $primary-purple;
+}
+
+.header-navigation-link-container:hover .header-navigation-underline {
+  background-color: $primary-purple;
+  height: 0.1rem;
+  margin: auto;
+  width: 1.25rem;
+}
+
+.header-navigation-link-container {
+  margin-bottom: 0;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 1.1rem;
+}
+
+.menu-right {
+  justify-content: flex-end;
+}
+
+.overlay-menu {
+  background-color: $secondary-black-blue;
+  color: $secondary-white;
+  padding-left: 0;
+  padding-right: 0;
+
+  .close-button {
+    color: $secondary-white;
+    font-size: 4rem;
+    margin-left: 3.5rem;
+  }
+}
+
+.overlay-menu-list {
+  display: grid;
+}
+
+.show-hide-menu-container {
+  margin-top: 0.3125rem;
+}
+
+.menu-list-item-link-container {
+  list-style: none;
+}
+
+.menu-list-item-link {
+  color: $white;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.menu-list-item-link:hover {
+  color: $primary-green;
+}
+
+.menu-list-item-link-secondary {
+  font-size: 2rem;
+}
+
+.top-header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -0.5rem;
+  max-width: 90rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  padding-top: 1rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .header-navigation-link-container {
+    margin-top: 0.4rem;
+  }
+
+  .close-button {
+    margin-left: 0.5rem;
+  }
+
+  .link-open-main-menu {
+    text-align: right;
+  }
+}
+
+.overlay_logo {
+  filter: invert(1);
+}
+
+.close-button-container {
+  margin-right: 0.5rem;
+  margin-top: -0.5rem;
+}

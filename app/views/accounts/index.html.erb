@@ -1,0 +1,50 @@
+<%= link_to 'New account', new_account_path, class: 'float-right button primary show-for-large' %>
+<h1 class="h2">Your accounts</h1>
+
+<div class="grid-x grid-margin-x">
+  <div class="cell large-4 medium-6">
+    <div class="card account-card">
+        <div class="card-section">
+          <h2 class="h3">
+            <%= link_to @account.name, account_path(@account.id), class: 'account-header-link' -%>
+            <% if @account.verified? %>
+              <br>
+              <small>
+                Verified
+              </small>
+            <% end %>
+            <br>
+            <%= link_to 'Show', @account, class: 'button inverse' %>
+            <%= link_to 'Edit', edit_account_path(@account), class: 'button inverse' %>
+            <%= link_to 'Destroy', @account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button inverse' %>
+          </h2>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="grid-x grid-margin-x">
+  <% @accounts.each do |account| %>
+    <div class="cell large-4 medium-6">
+      <div class="card account-card">
+        <div class="card-section">
+          <h2 class="h3">
+            <%= link_to account.name, account_path(account.id), class: 'account-header-link' -%>
+            <% if account.verified? %>
+              <br>
+              <small>
+                Verified
+              </small>
+            <% end %>
+            <br>
+            <%= link_to 'Show', account, class: 'button inverse' %>
+            <%= link_to 'Edit', edit_account_path(account), class: 'button inverse' %>
+            <%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button inverse' %>
+          </h2>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Account', new_account_path, class: 'button primary extended hide-for-large' %>
+

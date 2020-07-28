@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InvestorPortalInterview</title>
+    <title>Syndex Investor Portal Interview</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header-and-content">
+      <%= render partial: 'layouts/header' %>
+      <% if content_for? :page_hero %>
+        <div class="page-hero">
+          <%= yield :page_hero %>
+        </div>
+      <% end %>
+      <div class="page-content-container">
+        <%= render 'layouts/alerts' %>
+        <%= yield %>
+      </div>
+    </div>
+    <%= render partial: 'layouts/footer' %>
   </body>
 </html>

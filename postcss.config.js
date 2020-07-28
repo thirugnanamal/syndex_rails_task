@@ -8,5 +8,8 @@ module.exports = {
       },
       stage: 3,
     }),
+    require("postcss-assets")({
+      loadPaths: ["app/webpack"],
+    }),
   ],
 };

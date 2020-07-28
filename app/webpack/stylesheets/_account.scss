@@ -1,0 +1,87 @@
+.account-header-link {
+  color: $white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.summary-account-header-link {
+  color: $white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.summary-account-header-link:hover {
+  color: $white;
+}
+
+.account-header-link:hover {
+  color: $white;
+}
+
+.account-header-hero {
+  background: $tint-dark-blue;
+  color: $secondary-white;
+  height: 26.25rem;
+  padding: rem(40);
+
+  @include breakpoint(medium) {
+    padding: 3.5rem 5.5rem;
+  }
+}
+
+.account-key-info {
+  margin-top: 2rem;
+}
+
+.callout.primary.account-identity {
+  color: $secondary-black-blue;
+  font-size: 0.75rem;
+}
+
+.button.hollow:hover,
+.button.hollow.selected {
+  background-color: $primary-purple;
+  color: $white;
+}
+
+.certificate-card {
+  background: $tint-dark-blue;
+  color: $secondary-white;
+  margin-right: 1rem;
+}
+
+.certificate-type {
+  border: 1px solid $primary-purple;
+  border-radius: 3.125rem;
+  text-decoration: none;
+
+  .button {
+    border: 0;
+    height: 100%;
+  }
+
+  .certificate-details {
+    color: $secondary-dark-grey;
+  }
+
+  .selected {
+    .certificate-details {
+      color: $white;
+    }
+  }
+}
+
+.certificate-type:hover {
+  background-color: $primary-purple;
+  color: $white;
+
+  .certificate-details {
+    color: $white;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .eligible-certificate-type {
+    margin-top: 2rem;
+  }
+}

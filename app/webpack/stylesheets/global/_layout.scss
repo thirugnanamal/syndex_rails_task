@@ -1,0 +1,57 @@
+@mixin page-content {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+
+  @include breakpoint(medium) {
+    padding-left: 4.6875rem;
+    padding-right: 4.6875rem;
+  }
+
+  @include breakpoint(large) {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+  }
+}
+
+.header-and-content {
+  min-height: 100vh;
+}
+
+.page-content-container {
+  @include page-content;
+}
+
+.page-hero {
+  @include page-content;
+
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.span.selected {
+  color: $primary-purple;
+  padding: 0.1rem;
+}
+
+.white_link {
+  color: $white;
+}
+
+.alert {
+  .close-button {
+    cursor: pointer;
+    font-size: 2em;
+    line-height: 1;
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    z-index: 10;
+  }
+}
+
+.no-text-decoration {
+  text-decoration: none;
+}

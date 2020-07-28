@@ -1,0 +1,15 @@
+.button {
+  border-radius: 3.125rem;
+  text-decoration: none;
+}
+
+.button.inverse {
+  background-color: $white;
+  color: $primary-color;
+
+  &:hover,
+  &:active {
+    background-color: $tint-dark-purple;
+    color: $white;
+  }
+}

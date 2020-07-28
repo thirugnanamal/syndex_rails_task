@@ -1,1 +1,7 @@
+tmp
+bin
+node_modules
 public/packs
+public/packs-test
+public/assets
+vendor/bundle

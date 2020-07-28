@@ -1,0 +1,32 @@
+<div>
+  <h1 class="h2">Primary Market</h1>
+
+  <div class="grid-x grid-margin-x">
+    <% @issues.each do |issue| %>
+      <div class="card portfolio-issue-card">
+        <div class="portfolio-issue-card-header card-bg-image-center grid-y">
+          <div class="card-section grid-y align-right portfolio-issue-card-header-cover">
+            <h2 class="h3"><%= issue.name -%></h2>
+          </div>
+        </div>
+        <div class="card-section grid-y grid-margin-y align-spaced">
+          <table class="cell info-list-table">
+          <tbody>
+            <tr>
+              <td>Minimum Quantity</td>
+              <td><%= number_with_precision issue.minimum_quantity, precision: 0 %> Shares</td>
+            </tr>
+            <tr>
+              <td>Price per share</td>
+              <td><%= number_to_currency issue.price %></td>
+            </tr>
+          </tbody>
+          </table>
+          <div class="cell">
+            <%= link_to 'Apply', '', class: 'button hollow expanded black' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

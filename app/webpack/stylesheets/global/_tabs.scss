@@ -1,0 +1,24 @@
+.tabs-title > a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.vertical-tabs-title {
+  background-color: transparent;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin-right: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  .is_active {
+    color: $primary-purple;
+  }
+}
+
+.tab-indicator {
+  height: 10px;
+  margin-right: 10px;
+  opacity: 0;
+  width: 10px;
+}

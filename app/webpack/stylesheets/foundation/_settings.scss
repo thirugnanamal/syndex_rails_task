@@ -1,0 +1,79 @@
+// Colour settings
+$foundation-palette: (
+  primary: $primary-purple,
+  secondary: $primary-green,
+  black: $secondary-black-blue,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+);
+
+$light-gray: $secondary-light-grey;
+$medium-gray: $secondary-medium-grey;
+$dark-gray: $secondary-dark-grey;
+$black: $secondary-black-blue;
+$white: $secondary-white;
+
+// Typography settings
+$header-margin-bottom: 2rem;
+$anchor-text-decoration: underline;
+$body-font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$header-lineheight: 1.4;
+$header-margin-bottom: 2rem;
+
+$small-header-styles: (
+  "h1": (
+    "font-size": 48,
+    "margin-bottom": 2rem,
+  ),
+  "h2": (
+    "font-size": 36,
+    "margin-bottom": 1rem,
+  ),
+  "h3": (
+    "font-size": 32,
+    "margin-bottom": 0.6rem,
+  ),
+  "h4": (
+    "font-size": 24,
+    "margin-bottom": 0.6rem,
+  ),
+  "h5": (
+    "font-size": 18,
+    "margin-bottom": 0,
+  ),
+  "h6": (
+    "font-size": 14,
+    "margin-bottom": 0,
+  ),
+);
+
+$header-styles: (
+  "small": $small-header-styles,
+  "medium": $small-header-styles,
+  "large": $small-header-styles,
+);
+
+// Form settings
+$input-placeholder-color: $dark-gray;
+$input-border: none;
+$input-border-focus: none;
+$input-shadow: none;
+$input-shadow-focus: none;
+
+// Card
+$card-padding: 2.5rem;
+
+// Tab
+$tab-background: $secondary-light-grey;
+$tab-background-active: $secondary-light-grey;
+$tab-color: $secondary-dark-grey;
+$tab-active-color: $primary-purple;
+$tab-content-background: $secondary-light-grey;
+$tab-content-border: transparent;
+$tab-item-padding: 0.5625rem 0;
+$tab-content-padding: 0.5625rem 0;
+
+// Dropdown
+$dropdown-width: 100%;

@@ -1,0 +1,46 @@
+.page-footer {
+  background: $light-gray;
+  margin-top: 2rem;
+}
+
+.page-footer-content {
+  @include page-content;
+
+  padding-bottom: 3.125rem;
+  padding-top: 3.125rem;
+
+  @include breakpoint(medium) {
+    padding-bottom: 5.3125rem;
+    padding-top: 5.3125rem;
+  }
+
+  @include breakpoint(large) {
+    padding-bottom: 7.5rem;
+    padding-top: 7.5rem;
+  }
+}
+
+.page-footer__tagline {
+  color: $dark-gray;
+  margin: 2rem 0;
+}
+
+.legal-menu {
+  @include breakpoint(medium) {
+    li + li {
+      border-left: 1px solid $dark-gray;
+    }
+  }
+
+  a,
+  &.menu .menu-text {
+    color: $dark-gray;
+    font-weight: normal;
+  }
+
+  a:hover,
+  a:active {
+    color: $medium-gray;
+    text-decoration: underline;
+  }
+}

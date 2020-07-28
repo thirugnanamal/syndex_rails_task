@@ -1,0 +1,38 @@
+<footer class="page-footer">
+  <div class="page-footer-content">
+    <div>
+      <div class="grid-x">
+        <div class="grid-y cell small-12 medium-4">
+          <%= link_to markets_path do %>
+            <%= image_pack_tag 'logos/logo_dark.svg', alt: 'Syndex', width: 115, height: 34 %>
+          <% end %>
+          <p class="page-footer__tagline">
+            Private market specialists — providing an online platform for investors, businesses and syndicators to issue, manage and trade their private assets.
+          </p>
+          <ul class="menu">
+            <li>
+              <%= link_to 'https://www.facebook.com/syndexexchange/' do %>
+                <%= image_pack_tag 'icons/gray/facebook.svg', alt: 'Facebook' %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to 'https://www.linkedin.com/company/syndex-limited/' do %>
+                <%= image_pack_tag 'icons/gray/linkedin.svg', alt: 'Linkedin' %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="grid-x">
+        <ul class="menu legal-menu cell small-12 medium-auto">
+          <li class="menu-text">&copy; Syndex Limited &mdash; All Rights Reserved</li>
+        </ul>
+        <ul class="menu legal-menu cell small-12 medium-shrink">
+          <li><%= link_to 'Privacy Policy', 'https://www.syndex.exchange/privacy-policy', class: 'secondary' -%></li>
+          <li><%= link_to 'Account Holder Rules', 'https://uploads-ssl.webflow.com/5d5f10e937c7e86d87c5350e/5dd306cb020282232e2c09af_Account%20Holder%20Rules.pdf', class: 'secondary' -%></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

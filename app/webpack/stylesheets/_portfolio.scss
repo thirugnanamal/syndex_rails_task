@@ -1,0 +1,25 @@
+.cell.portfolio-issue-card {
+  @include breakpoint(medium) {
+    width: 21rem;
+  }
+}
+
+.portfolio-issue-card-header {
+  background-color: $primary-purple;
+  color: $secondary-white;
+  flex-grow: 0;
+  height: 15.625rem;
+
+  @include breakpoint(medium) {
+    height: 20rem;
+  }
+}
+
+.portfolio-issue-card-header-image-cover {
+  @include card-image-cover-gradient;
+}
+
+.card-bg-image-center {
+  background-position: center;
+  background-size: cover;
+}

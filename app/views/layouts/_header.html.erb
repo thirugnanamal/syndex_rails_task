@@ -1,0 +1,74 @@
+<div class="top-header">
+  <div class='grid-x grid-margin-x'>
+    <div class='cell small-8 text-left'>
+      <ul class="menu vertical medium-horizontal">
+        <li class="menu-text"><%= link_to markets_path do %>
+          <%= image_pack_tag 'logos/logo_dark.svg', alt: 'Syndex', height: 32, width: 115 %>
+        <% end %></li>
+          <li class="header-navigation-link-container show-for-large"><%= link_to 'Accounts', accounts_path, class: 'header-navigation-link' %><div class="header-navigation-underline"></div></li>
+          <li class="header-navigation-link-container show-for-large"><%= link_to 'Markets', markets_path, class: 'header-navigation-link' %><div class="header-navigation-underline"></div></li>
+      </ul>
+    </div>
+    <div class='cell small-4 text-right'>
+      <ul class="menu vertical medium-horizontal menu-right">
+        <li class="header-navigation-link-container show-for-large">
+        <% if signed_in? %>
+          <%= link_to 'Sign out', sign_out_path, class: 'header-navigation-link' %>
+        <% else %>
+          <%= link_to 'Sign in', '/auth/developer', class: 'header-navigation-link' %>
+        <% end %>
+        <div class="header-navigation-underline"></div></li>
+        <li class="header-navigation-link-container show-hide-menu-container">
+          <button type="button" class="header-navigation-link link-open-main-menu button clear" data-open="detailed-menu" id="link-open-main-menu" aria-label="Open menu">
+            <%= image_pack_tag 'shapes/menu.svg', alt: 'Syndex', height: 5, width: 35 %>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="full reveal overlay-menu page-content-container" id="detailed-menu" data-reveal>
+  <div class="top-header">
+    <div class='grid-x grid-margin-x'>
+      <div class='cell small-8 text-left logo-wrapper'>
+        <ul class="menu vertical medium-horizontal">
+          <li class="menu-text">
+            <%= link_to markets_path do %>
+              <%= image_pack_tag 'logos/logo_dark.svg', alt: 'Syndex', class: 'overlay_logo', height: 32, width: 115 %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class='cell small-4 text-right'>
+        <ul class="menu vertical medium-horizontal menu-right close-button-container">
+          <li class="header-navigation-link-container show-hide-menu-container">
+            <button data-close aria-label="Close menu" type="button" class="button clear">
+              <span class="close-button" aria-hidden="true">&times;</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class='grid-x grid-margin-x margin-top-3 padding-left-3 menu-items'>
+      <div class='cell small-12 medium-6 text-left'>
+        <ul class="overlay-menu-list">
+          <li class="menu-list-item-link-container margin-top-1 menu-item-1"><%= link_to 'Accounts', accounts_path, class: 'menu-list-item-link' %></li>
+          <li class="menu-list-item-link-container margin-top-1 menu-item-2"><%= link_to 'Market', markets_path, class: 'menu-list-item-link' %></li>
+        </ul>
+      </div>
+      <div class='cell small-12 medium-6 text-left'>
+        <ul class="menu vertical medium-horizontal margin-top-1">
+          <li class="menu-list-item-link-container margin-top-1 menu-item-3">
+            <% if signed_in? %>
+              <%= link_to 'Sign out', sign_out_path, class: 'menu-list-item-link menu-list-item-link-secondary' %>
+            <% else %>
+              <%= link_to 'Sign in', '/auth/developer', class: 'menu-list-item-link menu-list-item-link-secondary' %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
