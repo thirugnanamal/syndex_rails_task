@@ -1,0 +1,20 @@
+<%if @application %>
+	swal("Congrats!", "You have applied to this issue!", "success").then((value) => {
+  	$(window.location.replace("/"))
+});
+<% else %>
+	swal({
+	  title: "Account verification needed",
+	  text: "please verify this user before applying for this issue!",
+	  icon: "info",
+	  buttons: true,
+	  dangerMode: false,
+	})
+	.then((willDelete) => {
+  if (willDelete) {
+  	(window.location.replace("<%= edit_account_path(@account.id) %>"))
+  } else {
+  swal("sorry you can't apply to this issue");
+  }
+	});
+<% end %>
