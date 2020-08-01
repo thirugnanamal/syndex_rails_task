@@ -8,7 +8,10 @@
 
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></link>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -28,4 +31,18 @@
     </div>
     <%= render partial: 'layouts/footer' %>
   </body>
+  <!-- script for allowing only me or my roles in issue application form -->
+  <script>
+    $(document).on("turbolinks:load", function() {
+      $(document).on('change', '#application_form #current_user', function() {
+        if ($(this).prop("checked")) {
+          $('#application_form #account_id').prop("disabled", true)
+        }
+        else{
+          $('#application_form #account_id').prop("disabled", false)
+        }
+      });
+    });
+ </script>
 </html>
+

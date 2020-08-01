@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   post '/auth/:provider/callback', to: 'sessions#create'
   get '/sign_out', to: 'sessions#destroy', as: :sign_out
+  get 'apply_issue/:issue_id' => 'issues#apply'
+  post 'application' => 'issues#application'
 end
