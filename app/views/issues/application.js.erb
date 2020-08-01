@@ -1,5 +1,5 @@
 <%if @application %>
-	swal("Congrats!", "You have applied to this issue!", "success").then((value) => {
+	swal("Congrats!", "You have applied to this issue for <%= @account.name %>", "success").then((value) => {
   	$(window.location.replace("/"))
 });
 <% else %>
