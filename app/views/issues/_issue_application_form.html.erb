@@ -1,3 +1,4 @@
+<h3 class = "text-center">Issue Application Form </h3>
 <div class="card portfolio-issue-card" style = "padding-left:30%; padding-right:30%">
   <div class="portfolio-issue-card-header card-bg-image-center grid-y">
     <div class="card-section">
@@ -13,7 +14,7 @@
           </div>
         </div>
       </div>
-      <h6>(OR untick to select from your roles)</h6>
+      <h6>(OR) untick to select from your roles</h6>
       <div class="form-group">
         <label> My Roles </label>
         <%= select_tag 'account_id', options_from_collection_for_select(current_account.related_accounts, 'id', 'name'), {:style => 'width:50%', :disabled => 'true'} %> 
