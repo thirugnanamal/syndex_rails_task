@@ -1,0 +1,18 @@
+<div class="card-section grid-y grid-margin-y align-spaced">
+  <table class="cell info-list-table">
+    <tbody>
+      <tr>
+        <td>Issue Name </td>
+        <td><h5><%= @issue.name %></h5></td>
+      </tr>
+      <tr>
+        <td>Minimum Quantity</td>
+        <td><h5><%= number_with_precision @issue.minimum_quantity, precision: 0 %> Shares </h5></td>
+      </tr>
+      <tr>
+        <td>Price per share</td>
+        <td><h5><%= number_to_currency @issue.price %> </h5></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
