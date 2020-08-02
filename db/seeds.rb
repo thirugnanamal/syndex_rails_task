@@ -12,12 +12,16 @@ users = Account.create!([
                           { name: 'Luke', email: 'luke@rebels.com', verified: true },
                           { name: 'Han', email: 'han@rebels.com', verified: true },
                           { name: 'Leia', email: 'leia@rebels.com' },
-                          { name: 'Darth', email: 'darth@empire.com' }
+                          { name: 'Darth', email: 'darth@empire.com' },
+                          {name: 'Thiru', email: 'thiru@g.com'},
+                          {name: 'Mark', email: 'mark@g.com'}
                         ])
 Relationship.create!([
                        { primary_account: users[1], secondary_account: users[0] },
                        { primary_account: users[2], secondary_account: users[0] },
-                       { primary_account: users[1], secondary_account: users[2] }
+                       { primary_account: users[1], secondary_account: users[2] },
+                       { primary_account: users[4], secondary_account: users[2]},
+                       { primary_account: users[5], secondary_account: users[2]}
                      ])
 Issue.create!([
                 { name: 'Alderaan Farms', minimum_quantity: 10, price: 1000 },
